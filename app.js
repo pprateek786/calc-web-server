@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 
+const port = process.env.PORT || 3000;
 app.get('/about',function(req,res)
 {
     res.send('This is calculator');
@@ -43,9 +44,9 @@ app.get('/divide',function(req,res)
 });
 
 
-app.listen(3000,function()
+app.listen(port,function()
 {
-    console.log('Port number 3000');
+    console.log(`Port number ${port}`);
     var ss = JSON.stringify('name:Prateek,age:30');
     console.log(ss);
 });
